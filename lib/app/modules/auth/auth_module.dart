@@ -10,7 +10,11 @@ class AuthModule extends Module{
   
   @override
   void binds(i) {
-    //i.add(SplashController.new);
+    i.add<AuthRepository>(AuthRepositoryImpl.new);
+    i.add<AuthDataSource>(AuthDataSourceImpl.new);
+    i.add<TokenDatasource>(TokenDataSourceImpl.new);
+    i.add<TokenRepository>(TokenRepositoryImpl.new);
+
   }
 
   @override
