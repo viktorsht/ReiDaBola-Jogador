@@ -1,14 +1,13 @@
+import 'package:app/app/routes/app_routes.dart';
 import 'package:babigol/babigol.dart';
 import 'package:flutter/material.dart';
 
-class AuthPage extends StatefulWidget {
-  const AuthPage({super.key});
+import '../../../routes/route_navigator.dart';
 
-  @override
-  State<AuthPage> createState() => _AuthPageState();
-}
+class AuthPage extends StatelessWidget {
+  final RouteNavigator route;
+  const AuthPage({super.key, required this.route});
 
-class _AuthPageState extends State<AuthPage> {
   @override
   Widget build(BuildContext context) {
     final colors = BabigolColors.of(context);
@@ -36,6 +35,7 @@ class _AuthPageState extends State<AuthPage> {
                   widthFactor: 0.6,
                   child: BabigolButton(
                     onPressed: () {
+                      route.navigateTo('${AppRoutes.authModule}${AppRoutes.login}');
                     },
                     color: colors.white,
                     child: Row(
