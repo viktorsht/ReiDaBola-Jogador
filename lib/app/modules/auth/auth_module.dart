@@ -1,3 +1,4 @@
+import 'package:app/app/modules/auth/presentation/createUser/pages/create_user_page.dart';
 import 'package:app/app/routes/route_navigator.dart';
 import 'package:core_kb/core_kb.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -33,6 +34,7 @@ class AuthModule extends Module{
   void routes(r){
     r.child(AppRoutes.root, child: (context) => AuthPage(route: RouteNavigator(),));
     r.child(AppRoutes.login, child: (context) => LoginPage(controller: Modular.get(),));
+    r.child(AppRoutes.login, child: (context) => CreateUserPage(controller: Modular.get(), route: RouteNavigator()));
 
     /*r.child(AppRoutes.notInternet, child: (context) => NoInternetWidget(
       onPressed: () => Modular.to.navigate(AppRoutes.splashModule)
