@@ -32,7 +32,6 @@ class AuthDataSourceImpl implements AuthDataSource{
   Future<Token> login(Login login) async {
     final response = await service.post(RoutesApi.login, HeadersApi.getHeaders(), login.toJson());
     final json = jsonDecode(response.body);
-    print(json);
     return Token.fromJson(json);
   }
 /*
