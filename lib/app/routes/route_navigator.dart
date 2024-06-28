@@ -57,10 +57,3 @@ class RouteNavigator {
   }*/
 }
 
-// Definindo as rotas do aplicativo
-class AppRoutes {
-  static const String authModule = '/auth/';
-  static const String homeModule = '/home/';
-  static const String profileModule = '/profile/';
-  // Adicione outras rotas conforme necessário
-}

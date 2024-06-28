@@ -29,9 +29,9 @@ class AppModule extends Module{
   
   @override
   void routes(r){
-    r.module('/', module: SplashModule());
+    r.module(AppRoutes.root, module: SplashModule());
     r.module(AppRoutes.authModule, module: AuthModule());
-    /*r.module(AppRoutes.root, module: SplashModule());
+    /*
     r.module(AppRoutes.jobsModule, module: JobsModule());
     r.module(AppRoutes.curriculumModule, module: CurriculoModule());
     r.module(AppRoutes.splashModule, module: SplashModule());

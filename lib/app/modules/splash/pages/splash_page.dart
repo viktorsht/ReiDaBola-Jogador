@@ -1,10 +1,11 @@
 import 'package:app/app/routes/app_routes.dart';
 import 'package:babigol/babigol.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+import '../../../routes/route_navigator.dart';
 
 class SplashPage extends StatefulWidget {
-  const SplashPage({super.key});
+  final RouteNavigator route;
+  const SplashPage({super.key, required this.route});
 
   @override
   State<SplashPage> createState() => _SplashPageState();
@@ -15,9 +16,10 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
     Future.delayed(
-      const Duration(seconds: 15),
+      const Duration(seconds: 5),
       () async {
-        Modular.to.navigate(AppRoutes.authModule);
+        widget.route.navigateTo(AppRoutes.authModule);
+        //Modular.to.navigate(AppRoutes.authModule);
       },
     );
   }

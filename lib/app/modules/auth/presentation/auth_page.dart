@@ -27,10 +27,10 @@ class _AuthPageState extends State<AuthPage> {
                   'Domine o campo e conquiste a coroa.', 
                   style: textTheme.displayMedium!.copyWith(
                     fontSize: 24,
-                    color: colors.textColor
+                    color: colors.white
                   ),
                   textAlign: TextAlign.center,
-                               ),
+                ),
                 const SizedBox(height: 100),
                 FractionallySizedBox(
                   widthFactor: 0.6,
@@ -45,7 +45,7 @@ class _AuthPageState extends State<AuthPage> {
                           "Entrar",
                           style: textTheme.labelMedium!.copyWith(
                             fontSize: 22,
-                            color: colors.black
+                            color: colors.primary
                           ),
                         ),
                         const SizedBox(width: 10),

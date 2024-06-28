@@ -14,7 +14,8 @@ class AppWidget extends StatelessWidget{
       child: Consumer<ThemeController>(
         builder: (context, controller, child) {
           return MaterialApp.router(
-            theme: lightTheme(context),
+            theme: controller.isDarkMode ? darkTheme(context) : lightTheme(context),
+            //theme: lightTheme(context),
             debugShowCheckedModeBanner: false,
             routerConfig: Modular.routerConfig,
           );
@@ -22,5 +23,26 @@ class AppWidget extends StatelessWidget{
       )
     );
   }
-
 }
+
+      /*
+class AppWidget extends StatelessWidget{
+  const AppWidget({super.key});
+  
+  @override
+  Widget build(BuildContext context) {
+          return MaterialApp.router(
+            //theme: controller.isDarkMode ? darkTheme(context) : lightTheme(context),
+            theme: lightTheme(context),
+            debugShowCheckedModeBanner: false,
+            routerConfig: Modular.routerConfig,
+          );
+      return Consumer<ThemeController>(
+        builder: (context, controller, child) {
+        }
+      );
+      
+      
+  }
+}
+      */
