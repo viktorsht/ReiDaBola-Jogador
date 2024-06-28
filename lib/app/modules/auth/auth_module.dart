@@ -34,7 +34,7 @@ class AuthModule extends Module{
   void routes(r){
     r.child(AppRoutes.root, child: (context) => AuthPage(route: RouteNavigator(),));
     r.child(AppRoutes.login, child: (context) => LoginPage(controller: Modular.get(),));
-    r.child(AppRoutes.login, child: (context) => CreateUserPage(controller: Modular.get(), route: RouteNavigator()));
+    r.child(AppRoutes.createUser, child: (context) => CreateUserPage(controller: Modular.get(), route: RouteNavigator()));
 
     /*r.child(AppRoutes.notInternet, child: (context) => NoInternetWidget(
       onPressed: () => Modular.to.navigate(AppRoutes.splashModule)
