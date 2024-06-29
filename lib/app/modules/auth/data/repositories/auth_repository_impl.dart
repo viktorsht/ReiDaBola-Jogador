@@ -1,5 +1,6 @@
 import 'package:core_kb/cache/repositories/cache_repository.dart';
 
+import '../../domain/entities/create_user.dart';
 import '../../domain/entities/login.dart';
 import '../../domain/entities/token.dart';
 import '../../domain/repositories/auth_repository.dart';
@@ -14,14 +15,14 @@ class AuthRepositoryImpl implements AuthRepository{
 
   AuthRepositoryImpl(this.tokenRepository, this.authDataSource, this.cacheRepository);
 
-  /*@override
-  Future<User> createUser(CreateUser user) async {
+  @override
+  Future<Token> createUser(CreateUser user) async {
     try {
       return await authDataSource.createUser(user);
     } catch (e) {
       throw Exception(e);
     }
-  }*/
+  }
 
   @override
   Future<Token> login(Login login) async {

@@ -12,8 +12,8 @@ class CreateUserController extends Notifier<BaseState>{
   Future<void> createUser(CreateUser entity) async {
     setState(CreateUserLoading());
     try{
-      final data = await authRepository.createUser(entity);
-      setState(CreateUserSucess(data: data));
+      await authRepository.createUser(entity);
+      setState(CreateUserSucess());
     }
     catch (e){
       setState(CreateUserError(error: e.toString()));
