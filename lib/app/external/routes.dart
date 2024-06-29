@@ -7,5 +7,6 @@ class RoutesApi{
   
   //CONTAS
   static String login = '${Api.urlApi}/login'; 
+  static String createUser = '${Api.urlApi}/register'; 
 
 }
