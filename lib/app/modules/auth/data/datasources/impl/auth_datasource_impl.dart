@@ -4,6 +4,7 @@ import 'package:core_kb/api/headers.dart';
 import 'package:core_kb/http/http_client.dart';
 
 import '../../../../../external/routes.dart';
+import '../../../domain/entities/create_user.dart';
 import '../../../domain/entities/login.dart';
 import '../../../domain/entities/token.dart';
 import '../auth_datasource.dart';
@@ -14,13 +15,14 @@ class AuthDataSourceImpl implements AuthDataSource{
   final Headers headers;
 
   AuthDataSourceImpl(this.service, this.headers);
-/*
+
   @override
-  Future<User> createUser(CreateUser user) async {
+  Future<Token> createUser(CreateUser user) async {
     final response = await service.post(RoutesApi.createUser, HeadersApi.getHeaders(), user.toJson());
     final json = jsonDecode(response.body);
-    return User.fromJson(json);
+    return Token.fromJson(json);
   }
+  /*
 
   @override
   Future<int> interception(String token) async {
